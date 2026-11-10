@@ -45,7 +45,7 @@ This repository holds rules only. Signal itself is a separate executable.
 |---|---|---|
 | **Signal** (`signal.exe`) | Surveys a Windows host in about a minute and runs its built-in rules and yours. Read-only. | [intrusion.academy/signal](https://intrusion.academy/signal) |
 | **Signal Rules** | Rules written and tested by the community, run beside the built-in ones with `-rules`. | This repository |
-| **Signal Console** | Imports the run files of all hosts. Its Rules page shows each rule file the hosts loaded. | [Signal Console](https://github.com/intrusion-academy/Signal-Console) |
+| **Signal Console** | Imports the run files of all hosts. Its Rules page shows each rule file the hosts loaded. | [Signal Console](https://github.com/intrusion-academy/Signal-Console-Community) |
 | **Documentation** | How a rule works, its syntax, testing and tuning. | [intrusion.academy/signal/doc/latest](https://intrusion.academy/signal/doc/latest) |
 
 <br>
