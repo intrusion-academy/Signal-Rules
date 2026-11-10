@@ -1,0 +1,21 @@
+name: Ask for a rule
+description: A detection you would like to see in the library.
+labels: ["rule request"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What should it detect?
+      description: The activity, and why it is suspicious in itself.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Where is the evidence?
+      description: The log, event ID, registry key or artifact that records it, if you know.
+  - type: input
+    id: attack
+    attributes:
+      label: ATT&CK technique
+      placeholder: T1546.007

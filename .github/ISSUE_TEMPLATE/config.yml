@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Write a rule (documentation)
+    url: https://intrusion.academy/signal/doc/latest/rules-first-rule
+    about: How a rule works, its syntax, testing and tuning.
+  - name: Download Signal
+    url: https://intrusion.academy/signal
+    about: The Signal executable, editions, services and training.
+  - name: Report a security problem
+    url: https://intrusion.academy/contact?topic=signal&subtopic=bug
+    about: Report privately, as described in SECURITY.md. Do not open a public issue.

@@ -1,0 +1,25 @@
+name: False positive
+description: A rule in this library fired on something benign.
+labels: ["false positive"]
+body:
+  - type: input
+    id: rule
+    attributes:
+      label: Rule id
+      placeholder: EXEC-NETSH-HELPER-ADDED
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What it fired on
+      description: The benign program or activity, and the fields that matched. Replace host names, user names and addresses with placeholders.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Signal version
+      description: The output of `signal version`.
+    validations:
+      required: true
