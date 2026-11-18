@@ -121,17 +121,18 @@ Run it from PowerShell with a JDK 11 or newer: `java IntelToSignalSim.java`. The
 - Signal 1.0.1 or newer: [intrusion.academy/signal](https://intrusion.academy/signal).
 - This rule: [github.com/intrusion-academy/Signal-Rules](https://github.com/intrusion-academy/Signal-Rules).
 
-## Hunt and assess now
+## Assess, patch, then hunt
 
-1. **Hunt.** In an elevated prompt:
+1. **Assess.** List Java 17.0.6+ installs on servers with AVX-512 VBMI CPUs (Ice Lake or newer Xeon, Zen 4 or newer EPYC).
+2. **Patch.** Apply the November 2026 updates, and follow your vendor's advice on stopgaps.
+3. **Hunt.** Patching closes the hole but does not show whether someone came through it first. In an elevated prompt:
 
    ```
    signal live -m Executions -rules .\Signal-Rules\rules -o \\fileserver\signal-runs\
    ```
 
    On a signal: read the command line and the account, then find which application the Java process was from its own command line (`-jar`, the class path, the install folder). Read that application's access log at that minute for the request that caused it.
-2. **Assess.** List Java 17.0.6+ installs on servers with AVX-512 VBMI CPUs (Ice Lake or newer Xeon, Zen 4 or newer EPYC). Patch to the November 2026 updates, and follow your vendor's advice on stopgaps.
-3. **Prepare.** Turn on process creation auditing with command lines, or Sysmon, before you need it.
+4. **Prepare.** Turn on process creation auditing with command lines, or Sysmon, before you need it.
 
 ## References
 
