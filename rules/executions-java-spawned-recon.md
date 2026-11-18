@@ -85,7 +85,9 @@ The rule ships 11 tests (4 that must match, 7 look-alikes that must not). `signa
 
 ## Proof
 
-Tested end to end on 2026-11-18, on Windows 11 with Security process-creation auditing (with command lines) and Sysmon. A harmless Java program, below, made `java.exe` the parent of the processes an attacker's first commands would create. It contains no exploit code, and that CPU cannot trigger Java4Shell.
+**What was tested is what the rule watches, not the exploit.** The rule reads the processes a Java process starts after it has been exploited. Those look the same on any Windows host, server or laptop, whatever the CPU, so proving the rule needs no vulnerable CPU and no exploit. It needs `java.exe` starting those processes, with Windows recording them.
+
+Tested end to end on 2026-11-18, on a Windows host with Security process-creation auditing (with command lines) and Sysmon. A harmless Java program, below, made `java.exe` the parent of the processes an attacker's first commands would create. It contains no exploit code.
 
 | Child of `java.exe` | Result |
 |---|---|
