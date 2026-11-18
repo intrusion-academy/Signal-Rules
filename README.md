@@ -83,11 +83,13 @@ Keep only the rules you want: `-rules` reads every `*.json` and `*.pack` file in
 
 ```
 rules/
-  executions-netsh-helper-added.json    one file per rule or per topic
+  executions-java-spawned-recon.json    the rule: one file per rule or per topic
+  executions-java-spawned-recon.md      its write-up: the threat, what it sees and can't, the proof
   ...
 ```
 
-- Every file is a JSON list of rules in Signal's own format (the same as the built-in rules).
+- Every `.json` file is a JSON list of rules in Signal's own format (the same as the built-in rules).
+- Each rule has a `.md` write-up beside it. Signal reads only `*.json` and `*.pack`, so the write-ups never get in its way.
 - File names start with the module, in lower case: `executions-`, `persistence-`, `logons-`.
 - `rules/` is flat: Signal reads one folder, not its sub-folders.
 
